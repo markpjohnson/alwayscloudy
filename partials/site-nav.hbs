@@ -4,7 +4,7 @@
             <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /> <span>{{@site.title}}</span></a>
             <div class="site-nav-content">
                 {{#if @site.navigation}}
-                    {{navigation}}
+                    {{navigation type="primary"}}
                 {{/if}}
                 {{#is "post"}}
                     <span class="nav-post-title {{#unless @site.logo}}dash{{/unless}}">{{post.title}}</span>
