@@ -14,15 +14,15 @@
     </div>
     <div class="site-nav-right">
         {{#if @site.secondary_navigation}}
-            {{!-- {{navigation type="secondary"}} --}}
+            {{navigation type="secondary"}}
             <!-- secondary navigation -->
-            <ul class="nav" role="menu">
+            {{!-- <ul class="nav" role="menu">
                 {{#foreach @site.secondary_navigation}}
                     <li class="nav-{{slug}}" role="menuitem">
                         <a href="{{url}}" class="social-link"><i class="fab fa-{{slug}} fa-2x"></i></a>
                     </li>
                 {{/foreach}}
-            </ul>
+            </ul> --}}
         {{else}}
             <div class="social-links">
                 {{#if @site.facebook}}
