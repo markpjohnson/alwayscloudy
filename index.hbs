@@ -8,11 +8,8 @@ into the {body} of the default.hbs template --}}
             {{> "site-nav"}}
             <div class="site-header-content">
                 <h1 class="site-title">
-                    {{!-- {{#if @site.logo}} --}}
-                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-                    {{!-- {{else}} --}}
-                        {{@site.title}}
-                    {{!-- {{/if}} --}}
+                    <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+                    <span>{{@site.title}}</span>
                 </h1>
                 <h2 class="site-description">{{@site.description}}</h2>
             </div>
@@ -23,16 +20,12 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner posts">
-
         <div class="post-feed">
             {{#foreach posts}}
-
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
-
             {{/foreach}}
         </div>
-
     </div>
 </main>
 
