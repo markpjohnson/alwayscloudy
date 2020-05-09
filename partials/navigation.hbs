@@ -1,0 +1,30 @@
+{{#if isSecondary}}
+    <!-- secondary navigation -->
+    <ul class="nav" role="menu">
+        {{#foreach navigation}}
+            {{#if slug == "GitHub"}}
+                <li class="nav-{{slug}}" role="menuitem">
+                    <a href="{{url}}" class="social-link"><i class="fab fa-github"></i> {{slug}}</a>
+                </li>
+            {{/if}}
+            {{#if slug == "LinkedIn"}}
+                <li class="nav-{{slug}}" role="menuitem">
+                    <a href="{{url}}" class="social-link"><i class="fab fa-linkedin"></i> {{slug}}</a>
+                </li>
+            {{else}}
+                <li class="nav-{{slug}}" role="menuitem">
+                    <a href="{{url}}" class="social-link">{{slug}}</a>
+                </li>
+            {{/if}}
+        {{/foreach}}
+    </ul>
+{{else}}
+    <!-- primary navigation -->
+    <ul class="nav" role="menu">
+        {{#foreach navigation}}
+            <li class="{{link_class for=(url) class=(concat "nav-" slug)}}" role="menuitem">
+                <a href="{{url absolute="true"}}">{{label}}</a>
+            </li>
+        {{/foreach}}
+    </ul>
+{{/if}}
