@@ -2,20 +2,9 @@
     <!-- secondary navigation -->
     <ul class="nav" role="menu">
         {{#foreach navigation}}
-            {{#if (eq slug "GitHub")}}
-                <li class="nav-{{slug}}" role="menuitem">
-                    <a href="{{url}}" class="social-link"><i class="fab fa-github"></i> {{slug}}</a>
-                </li>
-            {{/if}}
-            {{#if (eq slug "LinkedIn")}}
-                <li class="nav-{{slug}}" role="menuitem">
-                    <a href="{{url}}" class="social-link"><i class="fab fa-linkedin"></i> {{slug}}</a>
-                </li>
-            {{else}}
-                <li class="nav-{{slug}}" role="menuitem">
-                    <a href="{{url}}" class="social-link">{{slug}}</a>
-                </li>
-            {{/if}}
+            <li class="nav-{{slug}}" role="menuitem">
+                <a href="{{url}}" class="social-link"><i class="fab fa-{{slug}}"></i> {{slug}}</a>
+            </li>
         {{/foreach}}
     </ul>
 {{else}}
