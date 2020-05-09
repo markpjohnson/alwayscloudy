@@ -2,8 +2,11 @@
     <!-- secondary navigation -->
     <ul class="nav" role="menu">
         {{#foreach navigation}}
-            <li class="nav-{{slug}}" role="menuitem">
-                <a href="{{url}}" class="social-link"><i class="fab fa-{{slug}} fa-2x"></i></a>
+            {{!-- <li class="nav-{{slug}}" role="menuitem">
+                <a href="{{url}}" class="social-link">{{label}}</a>
+            </li> --}}
+            <li class="{{link_class for=(url) class=(concat "nav-" slug)}}" role="menuitem">
+                <a href="{{url absolute="true"}}">{{label}}</a>
             </li>
         {{/foreach}}
     </ul>
