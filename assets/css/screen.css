@@ -357,7 +357,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     z-index: 100;
     flex-shrink: 0;
     display: inline-block;
-    margin-right: 32px;
+    margin-right: 12px;
     padding: 12px 0;
     color: #fff;
     font-size: 1.7rem;
